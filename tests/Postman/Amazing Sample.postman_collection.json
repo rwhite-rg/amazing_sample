@@ -1,0 +1,77 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Amazing Sample",
+		"_postman_id": "560bec72-f4d3-370f-a8f7-e83784315511",
+		"description": "Sample used for Amazing.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "API Login",
+			"request": {
+				"url": "{{url}}/api/login",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "{{username}}",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "API Login route (with JWT token response)"
+			},
+			"response": []
+		},
+		{
+			"name": "API Register",
+			"request": {
+				"url": "{{url}}/api/register",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Richard White",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "{{username}}",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "{{password}}",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "API Register route (which also returns the user's JWT token)"
+			},
+			"response": []
+		}
+	]
+}
