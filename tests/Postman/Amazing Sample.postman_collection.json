@@ -72,6 +72,23 @@
 				"description": "API Register route (which also returns the user's JWT token)"
 			},
 			"response": []
+		},
+		{
+			"name": "GET users",
+			"request": {
+				"url": "{{url}}/api/users",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "GET route for users, including JWT token"
+			},
+			"response": []
 		}
 	]
 }
